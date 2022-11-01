@@ -26,15 +26,15 @@
 
 [Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
 
-## Installation
-
-```bash
-$ npm install
-```
-
 ## Running the app
 
 ```bash
+# install dependencies
+$ npm install
+
+# configure environment variables and edit .env file with your token
+$ cp .env.example .env
+
 # development
 $ npm run start
 
@@ -45,29 +45,9 @@ $ npm run start:dev
 $ npm run start:prod
 ```
 
-## Test
+## Accessing the routes
 
-```bash
-# unit tests
-$ npm run test
+By default the server will run on port 3000, but you can change it by adding a `PORT` in .env
 
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
+Access route `/articles?q=` to do a search, sending a keyword as parameter `<q>`.
+Or go to route `/api` to see API documentation in Swagger
