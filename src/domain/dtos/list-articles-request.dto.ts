@@ -1,8 +1,8 @@
-import { IsString } from 'class-validator';
+import { IsDefined } from 'class-validator';
 import { ApiProperty } from '@nestjs/swagger';
 
 export class ListArticlesRequestDTO {
   @ApiProperty({ required: true })
-  @IsString()
+  @IsDefined()
   q: string;
 }
